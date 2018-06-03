@@ -9,16 +9,11 @@
 				},
 				"Earth": {
 					"distance": 1.0,
+					"scale": 0.5,
 					"orbitals": {
 						"Luna": {
 							"distance": 0.1,
-							"scale" : 0.5,
-							"orbitals": {
-								"Testing": {
-									"distance": 0.05,
-									"scale" : 0.25
-								}
-							}
+							"scale" : 0.25
 						}
 					}
 				}

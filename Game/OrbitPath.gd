@@ -1,5 +1,8 @@
 extends Node2D
 
+const ORBIT_COLOR = Color(255, 255, 0) # Yellow.
+const ORBIT_QUALITY = 0.25
+
 # Draws a basic circle to represent the orbital path.
 # If orbits are ever refactored to be capable of elipical orbits, this will also require a rewrite.
 
@@ -20,17 +23,23 @@ func draw_empty_circle(circle_center, circle_radius, color, resolution):
 	line_end = circle_radius.rotated(deg2rad(360)) + circle_center
 	draw_line(line_origin, line_end, color)
 
+
 func _draw():
+	draw_set_transform(-get_parent().position, 0.0, Vector2(1, 1))
+	
+	var dist = position - get_parent().position
 	draw_empty_circle(
-		#	get_parent().get_parent().position ,
-			-get_parent().position,
-		#	Vector2(get_parent().orbital_distance * 1000, get_parent().orbital_distance * 1000),
-			position - get_parent().position,
-			Color(255, 255, 0),
-			1
+			position,
+			dist,
+			ORBIT_COLOR,
+			ORBIT_QUALITY
 			)
+	# If a way to not redraw the circle constantly is found, uncomment this.
+	#if dist.x != 0:
+	#	set_process(false)
 
-
+# Potential optimization would be to remove the need to constantly redraw the circle when the orbiter moves.
+# That might not be possible, however.
 func _process(delta):
 	update()
 

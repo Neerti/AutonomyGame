@@ -1,6 +1,7 @@
 extends Node
 
-var default_galaxy_path = "res://Data/test_galaxy.json"
+var default_galaxy_path = "res://Data/default_galaxy.json"
+var default_galaxy_folder = "res://Data/Systems"
 
 func _ready():
 	generate_map_from_dict(load_json(default_galaxy_path))

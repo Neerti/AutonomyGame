@@ -1,0 +1,25 @@
+{
+	"Sol System": {
+		"pos_x": 0,
+		"pos_y": 0,
+		"orbitals": {
+			"Sol": {
+				"distance": 0.0
+			},
+			"Mercury": {
+				"distance": 0.387,
+				"scale": 0.5
+			}
+			"Earth": {
+				"distance": 1.0,
+				"scale": 0.5,
+				"orbitals": {
+					"Luna": {
+						"distance": 0.1,
+						"scale" : 0.25
+					}
+				}
+			}
+		}
+	}
+}
