@@ -72,6 +72,7 @@ func build_system_from_dict(new_name, dict):
 				new_system.add_child(new_orbital)
 
 # Builds objects which orbit systems or other orbitals.
+# TODO: Rewrite to be less copypasta.
 func build_orbital_from_dict(new_name, dict):
 	# Make the orbital object.
 	# TODO: Make this not hardcoded?
@@ -80,10 +81,16 @@ func build_orbital_from_dict(new_name, dict):
 	new_orbital.setup(new_name, dict["distance"])
 	
 	# TODO: Constructor?
-#	new_orbital.orbital_distance = dict["distance"]
-	# TODO: Set initial angle.
+	if dict.has("scale"):
+		new_orbital.scale = Vector2(dict["scale"], dict["scale"])
+	if dict.has("angle"):
+		new_orbital.initial_angle = dict["angle"]
 	
 	# Make orbitals, if any exist.
-#	if dict.has("orbitals"):
+	if dict.has("orbitals"):
+		var new_orbitals = dict["orbitals"]
+		for orbital in new_orbitals:
+			var new_sub_orbital = build_orbital_from_dict(orbital, new_orbitals[orbital])
+			new_orbital.add_child(new_sub_orbital)
 	
 	return new_orbital

@@ -6,6 +6,7 @@
 [node name="Orbiter" type="Position2D" index="0"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 retrograde = false
 orbital_distance = 1
 _initial_angle = null
