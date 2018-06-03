@@ -1,4 +1,4 @@
-extends Node2D
+extends Position2D
 
 # This implements a fake circular orbit around the node's parent.
 # Maybe someday it can be refactored to include ellipical orbits.

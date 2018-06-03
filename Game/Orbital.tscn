@@ -1,33 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Orbital.gd" type="Script" id=1]
 [ext_resource path="res://Star/star_placeholder.png" type="Texture" id=2]
 
-[sub_resource type="OccluderPolygon2D" id=1]
-
-closed = true
-cull_mode = 0
-polygon = PoolVector2Array( 0, -70, 50, -50, 70, 0, 50, 50, 0, 70, -50, 50, -70, 0, -50, -50 )
-
-[node name="Orbital" type="Node2D"]
+[node name="Orbiter" type="Position2D" index="0"]
 
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
 retrograde = false
 orbital_distance = 1
 _initial_angle = null
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="0"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-visible = false
-occluder = SubResource( 1 )
-light_mask = 1
-
-[node name="Sprite" type="Sprite" parent="." index="1"]
-
-modulate = Color( 0.344696, 0.662582, 0.980469, 1 )
+modulate = Color( 0.0107117, 0.871718, 0.914062, 1 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Transform" ]
 
 
