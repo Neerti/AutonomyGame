@@ -3,13 +3,13 @@
 [ext_resource path="res://Orbital.gd" type="Script" id=1]
 [ext_resource path="res://Star/star_placeholder.png" type="Texture" id=2]
 
-[node name="Orbiter" type="Position2D" index="0"]
+[node name="Orbiter" type="Position2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 retrograde = false
 orbital_distance = 1
-_initial_angle = null
+initial_angle = null
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

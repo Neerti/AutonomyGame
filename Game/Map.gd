@@ -3,7 +3,7 @@ extends Node
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var default_galaxy_path = "res://Data/default_galaxy.json"
+var default_galaxy_path = "res://Data/test_galaxy.json"
 
 func _ready():
 	generate_map_from_dict(load_json(default_galaxy_path))

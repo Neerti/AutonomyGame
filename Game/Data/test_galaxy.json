@@ -1,0 +1,39 @@
+{
+	"solar_systems": {
+		"Binary System": {
+			"pos_x": 0,
+			"pos_y": 0,
+			"orbitals": {
+				"Binary A": {
+					"distance": 0.1,
+					"angle": 0.0
+				},
+				"Binary B": {
+					"distance": 0.1,
+					"angle": 3.14
+				},
+				"Planet A": {
+					"distance": 0.5,
+				},
+				"Planet B": {
+					"distance": 1.0,
+					"orbitals": {
+						"Moon A": {
+							"distance": 0.1,
+							"scale": 0.5,
+							"orbitals": {
+								"Station A": {
+									"distance": 0.05,
+									"scale": 0.25
+								}
+							}
+						}
+					}
+				},
+				"Planet C": {
+					"distance": 1.5
+				},
+			}
+		}
+	}
+}

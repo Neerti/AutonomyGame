@@ -32,7 +32,7 @@ export (float) var orbital_distance = 1 # How far from parent to orbit to, in AU
 
 var _orbital_period = 365 # How long it takes to orbit once.
 var _current_angle = 0 # Radians.
-export (float) var _initial_angle = null # Ditto.
+export (float) var initial_angle = null # Ditto.
 
 var time = 0 # Todo: Remove in favor of universal time.
 
@@ -47,8 +47,8 @@ func _ready():
 		return
 	
 	_orbital_period = calculate_orbital_period(orbital_distance)
-	if(_initial_angle == null):
-		_initial_angle = TAU * randf() # Randomize the starting angle if not set.
+	if(initial_angle == null):
+		initial_angle = TAU * randf() # Randomize the starting angle if not set.
 	print(str(_orbital_period))
 
 # Todo: Remove this
@@ -61,8 +61,8 @@ func _process(delta):
 
 func update_orbital_position():
 	var pos = Vector2(
-			sin(_current_angle + _initial_angle) * orbital_distance * PIXELS_PER_AU,
-			cos(_current_angle + _initial_angle) * orbital_distance * PIXELS_PER_AU
+			sin(_current_angle + initial_angle) * orbital_distance * PIXELS_PER_AU,
+			cos(_current_angle + initial_angle) * orbital_distance * PIXELS_PER_AU
 			)
 	position = pos
 
