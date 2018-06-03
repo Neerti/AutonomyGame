@@ -1,0 +1,16 @@
+{
+	"solar_systems": {
+		"Sol System": {
+			"pos_x": 0,
+			"pos_y": 0,
+			"orbitals": {
+				"Sol": {
+					"distance": 0.0
+				},
+				"Earth": {
+					"distance": 1.0
+				}
+			}
+		}
+	}
+}

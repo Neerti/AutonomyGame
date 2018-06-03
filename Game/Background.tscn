@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://starfield_test3.png" type="Texture" id=1]
+[ext_resource path="res://starfield_test4.png" type="Texture" id=2]
+
+[node name="Background" type="ParallaxBackground" index="0"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." index="0"]
+
+motion_scale = Vector2( 0.01, 0.01 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 2048 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer" index="0"]
+
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 1024 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." index="1"]
+
+motion_scale = Vector2( 0.02, 0.02 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 2048 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer2" index="0"]
+
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 1024 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="." index="2"]
+
+motion_scale = Vector2( 0.04, 0.04 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 2048 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer3" index="0"]
+
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 1024 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+
