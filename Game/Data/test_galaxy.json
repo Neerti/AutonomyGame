@@ -14,24 +14,27 @@
 				},
 				"Planet A": {
 					"distance": 0.5,
+					"scale": 0.5
 				},
 				"Planet B": {
 					"distance": 1.0,
+					"scale": 0.5,
 					"orbitals": {
 						"Moon A": {
 							"distance": 0.1,
-							"scale": 0.5,
+							"scale": 0.25,
 							"orbitals": {
 								"Station A": {
-									"distance": 0.05,
-									"scale": 0.25
+									"distance": 0.03,
+									"scale": 0.1
 								}
 							}
 						}
 					}
 				},
 				"Planet C": {
-					"distance": 1.5
+					"distance": 1.5,
+					"scale": 0.5
 				},
 			}
 		}

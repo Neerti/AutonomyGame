@@ -1,4 +1,4 @@
-extends Position2D
+extends "res://System.gd"
 
 # This implements a fake circular orbit around the node's parent.
 # Maybe someday it can be refactored to include ellipical orbits.
@@ -80,3 +80,5 @@ func calculate_orbital_period(distance_from_parent):
 	period = sqrt(period)
 	return period
 
+func scale_sprite(new_vector2):
+	$"Sprite".scale = new_vector2

@@ -1,8 +1,5 @@
 extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 var default_galaxy_path = "res://Data/test_galaxy.json"
 
 func _ready():
@@ -33,8 +30,7 @@ func load_json(path):
 		printerr("Error Line: ", result_json.error_line)
 		printerr("Error String: ", result_json.error_string)
 		return
-	
-	
+
 
 func generate_map_from_dict(dict):
 	if typeof(dict) != TYPE_DICTIONARY:
@@ -45,6 +41,7 @@ func generate_map_from_dict(dict):
 	for key in solar_systems:
 		print(key, " -> ", solar_systems[key])
 		build_system_from_dict(key, solar_systems[key])
+
 
 # Builds star systems from a dictionary.
 func build_system_from_dict(new_name, dict):
@@ -82,7 +79,8 @@ func build_orbital_from_dict(new_name, dict):
 	
 	# TODO: Constructor?
 	if dict.has("scale"):
-		new_orbital.scale = Vector2(dict["scale"], dict["scale"])
+		# Note, DO NOT scale the base object, or it will mess up a lot of things.
+		new_orbital.scale_sprite(Vector2(dict["scale"], dict["scale"]))
 	if dict.has("angle"):
 		new_orbital.initial_angle = dict["angle"]
 	

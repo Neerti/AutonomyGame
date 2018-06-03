@@ -1,9 +1,9 @@
 extends Node2D
 
 const CAMERA_SPEED = 1000
-const ZOOM_STEP = 0.5
-const ZOOM_MIN = 0.5
-const ZOOM_MAX = 10.0
+const ZOOM_STEP = 1.0
+const ZOOM_MIN = 1.0
+const ZOOM_MAX = 20.0
 
 func _process(delta):
 	var velocity = Vector2()
